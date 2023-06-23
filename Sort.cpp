@@ -166,6 +166,31 @@ void BinaryScarch(int array[],int count, int num)
     
 }
 
+/******************* Binary Scarch for Recursion  ************************/
+
+int binaryscarch(int array[], int num2, int frist, int last)
+{
+    if (frist>last)
+    {
+        /* code */
+        return -1;
+    }
+    int mid= (frist+last)/2;
+    if(array[mid]==num2)
+    {
+        return mid;
+    }
+    else if(array[mid]>num2)
+    {
+        return binaryscarch(array, num2,frist,mid-1);
+    }
+    else
+    {
+        return binaryscarch(array,  num2, mid+1, last);
+    }
+
+}
+
 
 int main(){
     int count;
@@ -199,5 +224,10 @@ int main(){
     cin>>num;
     BinaryScarch(array, count,num);
 
+    int num2;
+    std::cout << "Input Scarch Element: ";
+    cin>>num2;
+    cout<<binaryscarch(array,num2,0,count-1);
+    
     return 0 ;
 }
