@@ -238,8 +238,5 @@ int main(){
         std::cout << "Number is not fount" << std::endl;
     }
     
-    
-
-    
     return 0 ;
 }
