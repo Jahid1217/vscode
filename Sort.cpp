@@ -227,7 +227,19 @@ int main(){
     int num2;
     std::cout << "Input Scarch Element: ";
     cin>>num2;
-    cout<<binaryscarch(array,num2,0,count-1);
+    int scarch = binaryscarch(array,num2,0,count-1);
+    if (scarch != -1)
+    {
+        /* code */
+        cout<<num2<<" is fount posoin "<< scarch+1<< endl;
+    }
+    else
+    {
+        std::cout << "Number is not fount" << std::endl;
+    }
+    
+    
+
     
     return 0 ;
 }
